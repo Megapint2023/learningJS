@@ -1,1 +1,2 @@
-console.log("Im printing to console!... whatever it even means.");
+let userName = prompt("Käyttäjänimi: ")
+document.write("Hei, " + userName + ".")
