@@ -5,28 +5,28 @@ const luckyNumber = Number(prompt("Haluttu noppien yhtsumma:"))
 let diceMin = 1;
 let diceMax = 6;
 let result = '';
+let range = dices * diceMin - diceMax;
 
+ if (luckynumber  < range || luckyNumber > range {
+     result = "Virhe! Yhteissumma ei ole mahdollinen."
+ } else if (luckyNumber % 10000 == 0) {
+     luckyNumber = false;
+ } else {
+     for (let i = 2; i < luckyNumber; i++) {
+         if (luckyNumber % i === 0) {
+             Prime = false;
+             break;
+         }
+     }
+ }
 
-// if (luckynumber  < 1 || (number)) {
-//     result = "Virhe! Syötä luku, joka on suurempu kuin 0."
-// } else if (number ===1) {
-//     Prime = false;
-// } else {
-//     for (let i = 2; i < number; i++) {
-//         if (number % i === 0) {
-//             Prime = false;
-//             break;
-//         }
-//     }
-// }
-//
-// if (number >= 1) {
-//     if (Prime) {
-//         result = `${number} on alkuluku.`;
-//     } else {
-//         result = `${number} ei ole alkuluku.`;
-//     }
-// }
+ if (luckyNumber >= 1) {
+     if (Prime) {
+         result = `${luckyNumber} on alkuluku.`;
+     } else {
+         result = `${luckyNumber} ei ole alkuluku.`;
+     }
+ }
 
  console.log(result);
  document.querySelector('#target').innerHTML = result;
