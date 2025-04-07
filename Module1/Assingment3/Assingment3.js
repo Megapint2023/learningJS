@@ -13,6 +13,7 @@ console.log("Sum:", sum);
 console.log("Product:", product);
 console.log("Avrage:", average);
 
+document.querySelector('#target').innerHTML = "Syötetyt arvot: " + num1 + "," + num2 + "," + num3 + "<br/>";
 document.querySelector('#target').innerHTML = "Sum: " + sum + "<br/>";
 document.querySelector('#target').innerHTML += "Product: " + product + "<br/>";
 document.querySelector('#target').innerHTML += "Average: " + average + "<br/>";
