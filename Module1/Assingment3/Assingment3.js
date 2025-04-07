@@ -13,4 +13,8 @@ console.log("Sum:", sum);
 console.log("Product:", product);
 console.log("Avrage:", average);
 
-document.querySelector('#target').innerHTML = result;
+document.querySelector('#target').innerHTML =
+  "Syötetyt luvut: " + num1 + ", " + num2 + ", " + num3 + "<br>" +
+  "Summa: " + sum + "<br>" +
+  "Tulo: " + product + "<br>" +
+  "Keskiarvo: " + average;
