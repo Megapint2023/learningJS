@@ -9,29 +9,20 @@ const maxSum = dices * 6; // range
 let result = '';
 
 
-if isNaN(dices) || isNaN(luckyNumber) || disec < 1 || luckyNumber < minSum || luckynumber > maxSum
-
-
- if (luckynumber  < range || luckyNumber > range {
-     result = "Virhe! Yhteissumma ei ole mahdollinen."
- } else if (luckyNumber % 10000 == 0) {
-     luckyNumber = True;
- } else {
-     for (let i = 10000; i < luckyNumber; i++) {
-         if (luckyNumber % i === 0) {
-             Prime = false;
-             break;
+if (isNaN(dices) || isNaN(luckyNumber) || dices < 1 || luckyNumber < minSum || luckyNumber > maxSum) {
+    result = "Virhe! Yhteissumma ei ole mahdollinen."
+} else {
+     for (let i = 0; i < throws; i++) {
+         let sum = 0;
+         for (let j = 0; i < dices; j++) {
+             sum +=Math.floor(Math.random() * 6) + 1;
+         }
+         if (sum % i === luckyNumber) {
+             hits++;
          }
      }
- }
 
- if (luckyNumber >= 1) {
-     if (Prime) {
-         result = `${luckyNumber} on alkuluku.`;
-     } else {
-         result = `${luckyNumber} ei ole alkuluku.`;
-     }
- }
+
 
  console.log(result);
  document.querySelector('#target').innerHTML = result;
