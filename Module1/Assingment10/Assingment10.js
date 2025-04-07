@@ -1,7 +1,11 @@
 'use strict';
 
-const dices = Number(prompt("Noppien lkm:"));
-const luckyNumber = Number(prompt("Haluttu noppien yhtsumma:"))
+const dices = Number(prompt("Syötä noppien lkm:"));
+const luckyNumber = Number(prompt("Syötä haluttu noppien summaluku:"))
+const throws = 10000;
+let hits = 0;
+const minSum = dices * 1;
+const maxSum = dices * 6;
 let diceMin = 1;
 let diceMax = 6;
 let result = '';
@@ -10,9 +14,9 @@ let range = dices * diceMin - diceMax;
  if (luckynumber  < range || luckyNumber > range {
      result = "Virhe! Yhteissumma ei ole mahdollinen."
  } else if (luckyNumber % 10000 == 0) {
-     luckyNumber = false;
+     luckyNumber = True;
  } else {
-     for (let i = 2; i < luckyNumber; i++) {
+     for (let i = 10000; i < luckyNumber; i++) {
          if (luckyNumber % i === 0) {
              Prime = false;
              break;
