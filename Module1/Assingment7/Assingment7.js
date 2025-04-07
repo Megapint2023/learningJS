@@ -1,25 +1,29 @@
 'use strict';
 
-const rolls = prompt("Montako kertaa noppaa heitetään?:");
-let sum = '';
+const rolls = prompt("Montako kertaa noppaa heitetään?:"); //heitot = input("Arpakuutioden lukumäärä: ")
+let sum = ''; //heitot = int(heitot)
+let randomNumber = 1-6;
 
-if (year  % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
-    result = `${year} on karkausvuosi.`;
+if (rolls  < 1 || rolls > 1000) {
+    result = "yötä arvo väliltä1-1000.";
+} else (randomNumber === {
+    result = `${sum} .`;
+}
+
+
+if (randomNumber === 1) {
+  room = 'Gryffindor';
+} else if (randomNumber === 2) {
+  room = 'Slytherin';
+} else if (randomNumber === 3) {
+  room = 'Hufflepuff';
 } else {
-    result = `${year} ei ole karkausvuosi.`;
+  room = 'Ravenclaw';
 }
 
-while True:
-//heitot = input("Arpakuutioden lukumäärä: ")
-//heitot = int(heitot)
-if (heitot < 1 or heitot > 1000) {
-
-}
-print("Virheellinen luku, syötä arvo 1 ja 1000. välillä.")
-else:
-break
 numbers = []
 import random
+
 for heitot in range(heitot):
 number = random.randint(1, 6)
 numbers.append(number)
