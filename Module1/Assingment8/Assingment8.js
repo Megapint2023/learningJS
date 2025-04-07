@@ -1,14 +1,15 @@
 'use strict';
 
-const year = prompt("Anna vuosiluku:");
+const startYear = prompt("Karkausvuodet väliltä alkaen (vuosi):");
+const endYear = prompt("Vuoteen asti (vuosi):");
 
-let result = '';
+let listHTML = '<ul>';
 
-if (year  % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
-    result = `${year} on karkausvuosi.`;
-} else {
-    result = `${year} ei ole karkausvuosi.`;
+for (let year = startYear; year <= endYear; year++) {
+    if (year  % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+    listHTML += `<li>${year}<li/>`;
+    }
 }
 
-console.log(result);
-document.querySelector('#target').innerHTML = result;
+console.log(listHTML);
+document.querySelector('#target').innerHTML = listHTML;
