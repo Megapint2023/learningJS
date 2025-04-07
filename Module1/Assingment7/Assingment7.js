@@ -2,7 +2,6 @@
 
 const rolls = prompt("Heitot lkm:");
 let sum = 0;
-// let randomNumber = 1-6;
 
 if (rolls  < 1 || rolls > 1000) {
     document.querySelector('#target').innerHTML = "Virhe! Syötä luku väliltä 1-1000...";
@@ -12,6 +11,7 @@ if (rolls  < 1 || rolls > 1000) {
         sum += roll;
     }
 
-    const result = `Nopan heitot: ${rolls}. Lukujen summa yht: ${sum}`;
+    const result = `Nopanheitot yht: ${rolls}. Lukujen summa yht: ${sum}`;
     console.log(result);
-    document.querySelect('#target').innerHTML = result;
+    document.querySelector('#target').innerHTML = result;
+}
