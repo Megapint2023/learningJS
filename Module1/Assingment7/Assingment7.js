@@ -1,8 +1,8 @@
 'use strict';
 
-const rolls = prompt("Montako kertaa noppaa heitetään?:"); //heitot = input("Arpakuutioden lukumäärä: ")
-let sum = ''; //heitot = int(heitot)
-let randomNumber = 1-6;
+const rolls = prompt("Heitot lkm:");
+let sum = 0;
+// let randomNumber = 1-6;
 
 if (rolls  < 1 || rolls > 1000) {
     result = ${sum} + roll;
@@ -21,13 +21,13 @@ if (randomNumber === 1-6) {
   room = 'Ravenclaw';
 }
 
-numbers = []
-import random
-
-for heitot in range(heitot):
-number = random.randint(1, 6)
-numbers.append(number)
-total = sum(numbers)
+// numbers = []
+// import random
+//
+// for heitot in range(heitot):
+// number = random.randint(1, 6)
+// numbers.append(number)
+// total = sum(numbers)
 
 console.log(result);
 document.querySelector('#target').innerHTML = result;
