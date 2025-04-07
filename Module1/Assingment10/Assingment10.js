@@ -4,12 +4,13 @@ const dices = Number(prompt("Syötä noppien lkm:"));
 const luckyNumber = Number(prompt("Syötä haluttu noppien summaluku:"))
 const throws = 10000;
 let hits = 0;
-const minSum = dices * 1;
-const maxSum = dices * 6;
-let diceMin = 1;
-let diceMax = 6;
+const minSum = dices * 1; // range
+const maxSum = dices * 6; // range
 let result = '';
-let range = dices * diceMin - diceMax;
+
+
+if isNaN(dices) || isNaN(luckyNumber) || disec < 1 || luckyNumber < minSum || luckynumber > maxSum
+
 
  if (luckynumber  < range || luckyNumber > range {
      result = "Virhe! Yhteissumma ei ole mahdollinen."
