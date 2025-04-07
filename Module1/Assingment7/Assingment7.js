@@ -5,30 +5,13 @@ let sum = 0;
 // let randomNumber = 1-6;
 
 if (rolls  < 1 || rolls > 1000) {
-    result = ${sum} + roll;
-} else (randomNumber === {
-    result = `${sum} .`;
-}
-
-
-if (randomNumber === 1-6) {
-  sum = 'Gryffindor';
-} else if (randomNumber === 2) {
-  room = 'Slytherin';
-} else if (randomNumber === 3) {
-  room = 'Hufflepuff';
+    document.querySelector('#target').innerHTML = "Virhe! Syötä luku väliltä 1-1000...";
 } else {
-  room = 'Ravenclaw';
-}
+    for (let i = 0; i < rolls; i++) {
+        const roll = Math.floor(Math.random() * 6) + 1;
+        sum += roll;
+    }
 
-// numbers = []
-// import random
-//
-// for heitot in range(heitot):
-// number = random.randint(1, 6)
-// numbers.append(number)
-// total = sum(numbers)
-
-console.log(result);
-document.querySelector('#target').innerHTML = result;
-document.querySelector('#target').innerHTML += sum;
+    const result = `Nopan heitot: ${rolls}. Lukujen summa yht: ${sum}`;
+    console.log(result);
+    document.querySelect('#target').innerHTML = result;
