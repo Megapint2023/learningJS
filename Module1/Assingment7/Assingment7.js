@@ -5,14 +5,14 @@ let sum = ''; //heitot = int(heitot)
 let randomNumber = 1-6;
 
 if (rolls  < 1 || rolls > 1000) {
-    result = "yötä arvo väliltä1-1000.";
+    result = ${sum} + roll;
 } else (randomNumber === {
     result = `${sum} .`;
 }
 
 
-if (randomNumber === 1) {
-  room = 'Gryffindor';
+if (randomNumber === 1-6) {
+  sum = 'Gryffindor';
 } else if (randomNumber === 2) {
   room = 'Slytherin';
 } else if (randomNumber === 3) {
