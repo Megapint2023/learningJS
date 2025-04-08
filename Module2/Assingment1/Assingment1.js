@@ -8,6 +8,6 @@ for (let i = 0; i < 5; i++) {
 }
 
 console.log("Numbers in reversed order:");
-for (let i = numbers.length - 1; i >= 0; i--) {
+for (let i = numbers.length; i >= 0; i--) {
     console.log(numbers[i]);
 }
