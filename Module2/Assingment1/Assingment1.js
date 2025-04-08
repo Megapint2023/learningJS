@@ -1,12 +1,9 @@
 'use strict';
 
-const number = Number(prompt("Syötä luku: "));
-let numbers = []
+const numbers = [];
 
-for (let number >= 5; i < numbers; i++) {
-        let number += 0;
-        for (let j = 0; j < numbers; j++) {
-            append numbers
-    }
-    const ;
-    result = `${number}${numbers}`;
+
+for (let i = 0; i < 5; i++) {
+        const input = Number(promt(Syötä luku ${i +1}));
+        number.push(input);
+}
