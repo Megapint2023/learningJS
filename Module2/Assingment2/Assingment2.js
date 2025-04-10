@@ -1,32 +1,29 @@
 'use strict';
 
-const startYear = Number(prompt("Karkausvuodet väliltä alkaen (vuosi):"));
-const endYear = Number(prompt("Vuoteen asti (vuosi):"));
+const participants = Number(prompt("How many participants: "));
 
-let listHTML = '<ul>';
+const names = [];
 
-for (let year = startYear; year <= endYear; year++) {
-    if (year  % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
-        listHTML += `<li>${year}</li>`;
+for (let i = 0; i < participants; i++) {
+  const name = prompt(`Participant name: ${i + 1}:`);
+  names.push(name);
+}
+
+for (let i = 0; i < names.length - 1; i++) {
+  for (let j = 0; j < names.length - i - 1; j++) {
+    if (names[j].toLowerCase() > names[j + 1].toLowerCase()) {
+      let temp = names[j];
+      names[j] = names[j + 1];
+      names[j + 1] = temp;
     }
+  }
 }
 
-listHTML += '</ul>'
+let listHTML = '<ol>';
+for (const name of names) {
+  listHTML += `<li>${name}</li>`;
+}
 
-console.log(listHTML);
+listHTML += '</ol>';
+
 document.querySelector('#target').innerHTML = listHTML;
-
-'use strict';
-
-const numbers = [];
-
-for (let i = 0; i < 5; i++) {
-    const input = Number(prompt(`Syötä luku ${i + 1}/5:`));
-    numbers.push(input);
-}
-
-console.log("Numbers in reversed order:");
-for (let i = numbers.length - 1; i >= 0; i--) {
-    console.log(numbers[i]);
-}
-
