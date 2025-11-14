@@ -7,7 +7,10 @@ for (let i = 0; i < 5; i++) {
     numbers.push(input);
 }
 
-console.log("Numbers in reversed order:");
+let output = "Numbers in reversed order: <br>";
+
 for (let i = numbers.length - 1; i >= 0; i--) {
-    console.log(numbers[i]);
+    output += numbers[i] + "<br>";
 }
+
+document.getElementById('target').innerHTML = output;
