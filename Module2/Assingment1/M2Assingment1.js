@@ -13,4 +13,5 @@ for (let i = numbers.length - 1; i >= 0; i--) {
     output += numbers[i] + "<br>";
 }
 
+console.log(output);
 document.getElementById('target').innerHTML = output;
