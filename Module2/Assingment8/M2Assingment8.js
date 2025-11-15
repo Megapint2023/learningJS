@@ -9,21 +9,16 @@ Print the result to HTML document. -->
 
 'use strict';
 
-const nimet = [Ella, Bella, Sinderella, Mozzarella];
-const iq = [100, 110, 120, 130];
+const nimet = ['Ella', 'Bella', 'Sinderella', 'Mozzarella'];
 
-function concat() {
+function concat(nimet) {
+    let textarray = '';
+    for (const elements of nimet) {
+        console.log(elements);
+        textarray += elements;
+    }
+    return textarray;
 }
 
-for (const nimi of nimet) {
-    console.log(nimi)
-}
-for (const points of iq) {
-    console.log(points)
-}
-let listHTML = '<ul>';
-for (const nimi of nimet) {
-    listHTML += `<li>${nimi}</li>`;
-}
-listHTML += '</ul>';
+const listHTML = concat(nimet);
 document.querySelector('#target').innerHTML = listHTML;
