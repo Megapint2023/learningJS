@@ -14,5 +14,9 @@ for (const number of numbers) {
     console.log(number)
 }
 
-listHTML = numbers;
+for (const number of numbers) {
+    listHTML += '<li>${number}</li>';
+}
+
+listHTML += '</ul>'
 document.querySelector('#target').innerHTML = listHTML;
