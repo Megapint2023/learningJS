@@ -19,6 +19,6 @@ let listHTML = '<ul>'; // AVAA LISTA!
 for (const number of numbers) {
     listHTML += `<li>${number}</li>`; // LUO LISTA (huomioi hipsut poikkeaa)
 }
-// `` näytä tarttee silloin kun haluaa tunkee listan sisään muuttujan
+// (backkicks) `` näytä tarttee silloin kun haluaa tunkee listan sisään muuttujan
 listHTML += '</ul>' //SULJE LISTA!
 document.querySelector('#target').innerHTML = listHTML;
