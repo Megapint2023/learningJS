@@ -4,14 +4,14 @@ const numbers = [];
 const zero = 0;
 
 while (true) {
-    let input = Number(prompt("Syötä uusi luku:"));
-    if (input === zero) break;
-    numbers.push(input);
+    let number = Number(prompt("Syötä uusi luku:"));
+    if (number === zero) break;
+    numbers.push(number);
 }
 numbers.sort((a, b) => b - a);
 
 for (const number of numbers) {
-    console.log(numbers)
+    console.log(number)
 }
 
 listHTML = numbers;
