@@ -41,7 +41,42 @@ someArray.sort((a, b) => {
 </head>
 <body>
 <h1>ASSIGNMENT:</h1>
-<h3>...</h3>
+<h3>
+    Write a voting program as described below for small-scale meeting use. <br>
+    The program asks for the number of candidates. <br>
+    Then the program asks for the names of the candidates: 'Name for candidate 1 <br>
+    Store the candidates' names and initial vote count in objects like this:<br>
+[ <br>
+    {<br>
+        name: 'ellie',<br>
+        votes: 0,<br>
+    },<br>
+    {<br>
+        name: 'frank',<br>
+        votes: 0,<br>
+    },<br>
+    {<br>
+        name: 'pamela',<br>
+        votes: 0,<br>
+    },<br>
+] <br>
+    The program asks for the number of voters. <br>
+    The program asks each voter in turn who they will vote for. <br>
+    Voter shoud enter candidate name. If the voter enters an empty value <br>
+    instead of the voting number, it will be interpreted as an empty vote. <br>
+    The program announces the name of the winner and the results by printing <br>
+    it to the console: The winner is pamela with 3 votes. <br>
+    results: <br>
+    pamela: 3 votes <br>
+    frank: 1 votes <br>
+    ellie: 1 votes <br>
+    Some help: <br>
+    // You need to compare votes so console log a and b to see how to get the correct property. <br>
+    someArray.sort((a, b) => { <br>
+    console.log(a, b); <br>
+    return b - a; <br>
+    });<br>
+</h3>
 <p>-----------------------------------------------------------------------</p>
 <h2 id="target"></h2>
 <script src="M2Assingment10.js"></script>
