@@ -9,7 +9,7 @@ of each roll in an unordered list (<ul>). (2p) -->
 const numbers = [];
 const dicemax = 6;
 
-function diceroll() {
+function diceroll () {
   return Math.floor(Math.random() * (dicemax)) + 1;
 }
 // Math.random() -> 0,111... - 0,999
