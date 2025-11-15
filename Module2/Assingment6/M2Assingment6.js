@@ -15,15 +15,14 @@ function diceroll() {
 // Math.random() -> 0,111... - 0,999
 // Math.floor() -> pyöristää tasalukuun alaspäin
 
-while (True) {
+while (true) {
   const number = diceroll ();
   if (numbers.includes(number))
     break;
   else
-  numbers.push(number)
+    numbers.push(number)
 }
-numbers.sort((a, b) => a - b);
-
+// numbers.sort((a, b) => a - b);
 for (const number of numbers) {
     console.log(number)
 }
