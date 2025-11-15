@@ -4,11 +4,10 @@ const numbers = [];
 
 while (true) {
     let number = Number(prompt("Syötä luku:"));
-    if (numbers.includes(number)) {
+    if (numbers.includes(number)) { // kätevä sisäänrakennettu funktio
         alert("Syötit saman luvun kahdesti!")
         break;
     }
-
     numbers.push(number)
 }
 numbers.sort((a, b) => a - b);
@@ -22,5 +21,3 @@ for (const number of numbers) {
 }
 listHTML += '</ul>' //SULJE LISTA!
 document.querySelector('#target').innerHTML = listHTML;
-
-
