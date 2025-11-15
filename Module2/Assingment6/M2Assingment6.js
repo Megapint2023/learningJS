@@ -30,5 +30,5 @@ let listHTML = '<ul>'; //AVAA LISTA!
 for (const number of numbers) {
     listHTML += `<li>${number}</li>`; //LUO LISTA || `` = -> (backkicks)
 }
-listHTML += '</ul>' //SULJE LISTA!
+listHTML += '</ul>'; //SULJE LISTA!
 document.querySelector('#target').innerHTML = listHTML;

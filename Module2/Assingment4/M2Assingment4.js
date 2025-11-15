@@ -20,5 +20,5 @@ for (const number of numbers) {
     listHTML += `<li>${number}</li>`; // LUO LISTA (huomioi hipsut poikkeaa)
 }
 // (backkicks) `` näytä tarttee silloin kun haluaa tunkee listan sisään muuttujan
-listHTML += '</ul>' //SULJE LISTA!
+listHTML += '</ul>'; //SULJE LISTA!
 document.querySelector('#target').innerHTML = listHTML;
