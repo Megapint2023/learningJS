@@ -1,16 +1,14 @@
 'use strict';
 
-const variable1 = Number(prompt(""));
-let variable2 = [];
-let variable3 = '';
+const target = document.getElementById('target')
+let listHTML =
+    `
+    <li>First Item</li>
+    <li>Second Item</li>
+    <li>Third Item</li>
+    `;
 
-console.log(variable2);
-
-let listHTML = '<ul>'; //AVAA LISTA
-for (const result of names) {
-    listHTML += `<li>${variable1}</li>`; //LUO LISTA || `` (backkicks)
-}
-listHTML += '</ul>'; //SULJE LISTA
+target.innerHTML = listHTML;
+target.classList.add('my-list');
 
 
-document.querySelector('#target').innerHTML = listHTML;
