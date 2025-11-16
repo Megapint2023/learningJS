@@ -8,31 +8,23 @@ for (let x = 0; x < candidates; x++) {
   names.push(name)
 }
 
-const voters = Number(prompt("Äänestäjien lukumäärä: "));
+const votes = Number(prompt("Äänestäjien lukumäärä: "));
 
-const voting = [];
-for (let vote = 0; x < voters; x++) {
-  const name = prompt(`Ehdokkaan ${x + 1} nimi:`);
-  names.push(name)
+const results = [];
+for (let vote = 0; vote < votes; vote++) {
+  const name = prompt(`Äänestäjä ${vote + 1} äännestää (ehdokkaan nimi):`);
+  results.push(name)
 }
 
-function voting(names, voters) {
-    let results = ;
-    let vote = 0;
-    let results = name + 0 + vote;
-    if (vote === voters) break;
-    for (const vote of candidates) {
-         if (name === names)
-             name.push(vote)
-    return results;
+function scores(results) {
+  let score = 0 + name in scores
+  let name;
 }
-
-
   //someArray.sort((a, b) => {
   //console.log(a, b);
   //return b - a;
 
-console.log("Results:", results);
+console.log("Results:", scores);
 
-const listHTML1 = results;
+const listHTML1 = scores;
 document.querySelector('#target1').innerHTML = listHTML1;
