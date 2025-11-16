@@ -16,9 +16,9 @@ for (let vote = 0; vote < votes; vote++) {
       score.name++;
 }
 
-results.sort((a, b) => b - a);
+names.sort((a, b) => b - a);
 
-console.log("Results:", results);
+console.log("Results:", names);
 
-const listHTML1 = results;
+const listHTML1 = names;
 document.querySelector('#target1').innerHTML = listHTML1;
