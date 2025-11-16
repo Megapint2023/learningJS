@@ -1,16 +1,26 @@
 'use strict';
 
-const numbers = [2,5,7,9,10,11,16];
+const candidates = Number(prompt("Ehdokkaiden lukumäärä: "));
+const voters = Number(prompt("Äänestäjien lukumäärä: "));
 
-function even(numbers) {
-    let evennumbers = [];
-    for (const number of numbers) {
-         if (number % 2 === 0) {
-             evennumbers.push(number);
-         }
-    }
-    return evennumbers;
+function voting(candidates, voters) {
+    let names = candidates;
+    let vote = 0;
+    let results = name + 0 + vote;
+    if (vote === voters) break;
+    for (const vote of candidates) {
+         if (name === names)
+             name.push(vote)
+    return results;
 }
+
+
+    const names = [];
+for (let i = 0; i < participants; i++) {
+  const name = prompt(`Participant name: ${i + 1}:`);
+  names.push(name);
+}
+
 console.log("All numbers:", numbers);
 console.log("Even numbers", even(numbers))
 
