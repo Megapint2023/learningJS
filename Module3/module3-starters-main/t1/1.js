@@ -1,7 +1,8 @@
 'use strict';
 
 const target = document.getElementById('target')
-let listHTML =
+
+const listHTML =
     `
     <li>First Item</li>
     <li>Second Item</li>
@@ -10,5 +11,3 @@ let listHTML =
 
 target.innerHTML = listHTML;
 target.classList.add('my-list');
-
-
