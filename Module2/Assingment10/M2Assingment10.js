@@ -5,26 +5,20 @@ const candidates = Number(prompt("Ehdokkaiden lukumäärä: "));
 const names = [];
 for (let x = 0; x < candidates; x++) {
   const name = prompt(`Ehdokkaan ${x + 1} nimi:`);
-  names.push(name)
+  names.push({name: name, score: 0})
 }
 
 const votes = Number(prompt("Äänestäjien lukumäärä: "));
-
-const results = [];
 for (let vote = 0; vote < votes; vote++) {
-  const name = prompt(`Äänestäjä ${vote + 1} äännestää (ehdokkaan nimi):`);
-  results.push(name)
+  const newvote = prompt(`Äänestäjä ${vote + 1} kannattaa (ehdokkaan nimi):`);
+  for (const score of names)
+    if (score.name === newvote)
+      score.name++;
 }
 
-function scores(results) {
-  let score = 0 + name in scores
-  let name;
-}
-  //someArray.sort((a, b) => {
-  //console.log(a, b);
-  //return b - a;
+results.sort((a, b) => b - a);
 
-console.log("Results:", scores);
+console.log("Results:", results);
 
-const listHTML1 = scores;
+const listHTML1 = results;
 document.querySelector('#target1').innerHTML = listHTML1;
