@@ -1,10 +1,23 @@
 'use strict';
 
 const candidates = Number(prompt("Ehdokkaiden lukumäärä: "));
+
+const names = [];
+for (let x = 0; x < candidates; x++) {
+  const name = prompt(`Ehdokkaan ${x + 1} nimi:`);
+  names.push(name)
+}
+
 const voters = Number(prompt("Äänestäjien lukumäärä: "));
 
-function voting(candidates, voters) {
-    let names = candidates;
+const voting = [];
+for (let vote = 0; x < voters; x++) {
+  const name = prompt(`Ehdokkaan ${x + 1} nimi:`);
+  names.push(name)
+}
+
+function voting(names, voters) {
+    let results = ;
     let vote = 0;
     let results = name + 0 + vote;
     if (vote === voters) break;
@@ -15,16 +28,11 @@ function voting(candidates, voters) {
 }
 
 
-    const names = [];
-for (let i = 0; i < participants; i++) {
-  const name = prompt(`Participant name: ${i + 1}:`);
-  names.push(name);
-}
+  //someArray.sort((a, b) => {
+  //console.log(a, b);
+  //return b - a;
 
-console.log("All numbers:", numbers);
-console.log("Even numbers", even(numbers))
+console.log("Results:", results);
 
-const listHTML1 = numbers;
-const listHTML2 = even(numbers);
+const listHTML1 = results;
 document.querySelector('#target1').innerHTML = listHTML1;
-document.querySelector('#target2').innerHTML = listHTML2;
