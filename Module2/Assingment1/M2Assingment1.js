@@ -2,16 +2,15 @@
 
 const numbers = [];
 
-for (let i = 0; i < 5; i++) {
-    const input = Number(prompt(`Syötä luku ${i + 1}/5:`));
-    numbers.push(input);
+for (let x = 0; x < 5; x++) {
+    let number = Number(prompt(`Syötä luku ${x + 1}/5:`));
+    numbers.push(number);
 }
 
-let output = "Numbers in reversed order: <br>";
-
-for (let i = numbers.length - 1; i >= 0; i--) {
-    output += numbers[i] + "<br>";
+let reverse = [];
+for (let y = 4; y >= 0; y--) {
+    reverse.push(numbers[y]);
 }
 
-console.log(output);
-document.getElementById('target').innerHTML = output;
+console.log(reverse);
+document.getElementById('target').innerHTML = reverse;
