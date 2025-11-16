@@ -13,10 +13,10 @@ for (let vote = 0; vote < votes; vote++) {
   const newvote = prompt(`Äänestäjä ${vote + 1} kannattaa (ehdokkaan nimi):`);
   for (const score of names)
     if (score.name === newvote)
-      score.name++;
+      score.score++;
 }
 
-names.sort((a, b) => b - a);
+names.sort((a, b) => b.score - a.score);
 
 console.log("Results:", names);
 
