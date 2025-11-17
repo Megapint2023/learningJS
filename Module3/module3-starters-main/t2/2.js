@@ -7,12 +7,12 @@ l1.textContent = 'First item';
 target.appendChild(l1);
 
 const l2 = document.createElement('li')
-l2.classList.add('my-list');
-l2.textContent = 'First item';
+l2.classList.add('my-item');
+l2.textContent = 'Second item';
 target.appendChild(l2);
 
 const l3 = document.createElement('li')
-l3.textContent = 'First item';
+l3.textContent = 'Third item';
 target.appendChild(l3);
 
 /*  Open t2 folder in your IDE/editor. <br>
