@@ -106,8 +106,8 @@ for (const picture of picArray) {
     const figure = document.createElement('figure');
 
     const img = document.createElement('img');
-    img.src = element.image.medium;
-    img.alt = element.title;
+    img.src = picture.image.medium;
+    img.alt = picture.title;
     const figcaption = document.createElement('figcaption');
     figcaption.textContent = picture.caption;
 
