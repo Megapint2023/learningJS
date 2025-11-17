@@ -96,28 +96,28 @@ const picArray = [
 const pictures = document.getElementById('pictures')
 
 for (const picture of picArray) {
-    const element = document.createElement('article');
-    element.classList.add('card');
-}
-for (const picture of picArray) {
-    const element = document.createElement('h2');
-    element.textContent = picture.title;
-}
-for (const picture of picArray) {
-    const element = document.createElement('figure');
-}
-for (const picture of picArray) {
-    const element = document.createElement('img');
+
+    const article = document.createElement('article');
+    article.classList.add('card');
+
+    const h2 = document.createElement('h2');
+    h2.textContent = picture.title;
+
+    const figure = document.createElement('figure');
+
+    const img = document.createElement('img');
     img.src = element.image.medium;
     img.alt = element.title;
-}
-for (const picture of picArray) {
-  const element = document.createElement('figcaption');
-  element.textContent = picture.caption;
-}
-for (const picture of picArray) {
-  const element = document.createElement('p');
-  element.textContent = picture.description;
-}
+    const figcaption = document.createElement('figcaption');
+    figcaption.textContent = picture.caption;
 
+    const p = document.createElement('p');
+    p.textContent = picture.description;
 
+figure.appendChild(img);
+figure.appendChild(figcaption);
+article.appendChild(h2);
+article.appendChild(figure);
+article.appendChild(p);
+pictures.appendChild(article);
+}
