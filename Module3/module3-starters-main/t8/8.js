@@ -12,9 +12,17 @@ const operation = document.getElementById('operation');
 const button = document.getElementById('start');
 const result = document.getElementById('result');
 /*
-Button triggers chain id: start
-Anwser delivered id: result
- */
+addition
+subtraction
+multiplication
+division
+----------------------------
+const addition = num1 + num2;
+const subtraction = num1 - num2;
+const multiplication = num1 * num2;
+const division = num1 / num2;
+*/
+
 function operate(num1, num2, operation) {
   let result;
   if (operation === 'add') {
@@ -45,31 +53,9 @@ button.addEventListener('click', function () {
   const number1 = Number(num1.value);
   const number2 = Number(num2.value);
   const selection = operation.value;
-
+  result.textContent = calculation;
 })
 */
-
-/*
-addition
-subtraction
-multiplication
-division
- */
-
-/*
-<select id="operation">
-<option value="add">addition</option>
-<option value="sub">subtraction</option>
-<option value="multi">multiplication</option>
-<option value="div">division</option>
-</select>
- */
-/*
-const addition = num1 + num2;
-const subtraction = num1 - num2;
-const multiplication = num1 * num2;
-const division = num1 / num2;
- */
 
 /*
 Open t8 folder in your IDE/editor.
@@ -82,6 +68,3 @@ which operation the calculator needs to do.
 Example:
 Show the result in <p id="result"> when the button is clicked.
 */
-
-/*
- */
