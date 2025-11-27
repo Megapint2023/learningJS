@@ -1,35 +1,58 @@
 'use strict';
-    console.log('the script starts');
+console.log('script starts');
 
-    function synchronousFunction() {
-      let number = 1;
-      for(let i = 1; i < 100000; i++){
-        number += i;
-        console.log('synchronousFunction running');
-      }
-      console.log('regular function complete', number);
-    }
+async function searchShow(query) {
+  console.log('fetching data for', query);
+  try {
+    const response = await fetch(`https://api.tvmaze.com/search/shows?q=${encodeURIComponent(query)}`);
+    const data = await response.json();
+    console.log(data);
 
-    async function asynchronousFunction() {                 // asynchronous function is defined by the async keyword
-        console.log('asynchronous download begins');
-        try {                                               // error handling: try/catch/finally
-            const response = await fetch('https://api.chucknorris.io/jokes/random');    // starting data download, fetch returns a promise which contains an object of type 'response'
-            const jsonData = await response.json();          // retrieving the data retrieved from the response object using the json() function
-            console.log(jsonData.value);    // log the result to the console
-        } catch (error) {
-            console.log(error.message);
-        } finally {                                         // finally = this is executed anyway, whether the execution was successful or not
-            console.log('asynchronous load complete');
-        }
-    }
+    const resultsDiv = document.getElementById('results');
+    if (!resultsDiv) return;
+    resultsDiv.innerHTML = '';
 
-    synchronousFunction();
-    asynchronousFunction();
+    data.forEach(tvShow => {
+      const article = document.createElement('article');
 
-    console.log('the script ends');
+      const h2 = document.createElement('h2');
+      h2.textContent = tvShow.show.name;
+      article.appendChild(h2);
+
+      const a = document.createElement('a');
+      a.href = tvShow.show.url;
+      a.target = '_blank';
+      article.appendChild(a);
+
+      const img = document.createElement('img');
+      img.src = tvShow.show.image ? tvShow.show.image.medium : 'https://placehold.co/210x295?text=Not%20Found';
+      img.alt = tvShow.show.name;
+      article.appendChild(img);
+
+      const div = document.createElement('div');
+      div.innerHTML = tvShow.show.summary || 'No summary';
+      article.appendChild(div);
+
+      resultsDiv.appendChild(article);
+    });
+
+    // document.getElementById('target').textContent = JSON.stringify(data[0]?.show?.name || 'No result');
+  } catch (error) {
+    console.log(error.message);
+    document.getElementById('target').textContent = 'Error fetching data';
+  } finally {
+    console.log('fetch complete');
+  }
+}
+
+document.getElementById('searchForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const query = document.getElementById('query').value;
+  if (query) searchShow(query);
+});
 
 /*
 Develop the app even further. Optional chaining is not the best way to handle missing image.
 Use ternary operator or if/else to add a default image if TV-show is missing image property.
 Use https://placehold.co/210x295?text=Not%20Found as the default image.
- */
+*/
